@@ -24,14 +24,14 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="200"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="20" RenderingBias="Quality" ShadowDepth="1"/>
             </Grid.Effect>
-            <Grid Background="#FFA46FE4">
-                
+            <Grid Background="#FF8522BD">
+                <Image Source="/assets/self_image.png" Margin="10"></Image>
             </Grid>
         </Grid>
 
