@@ -16,37 +16,106 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="1">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFC5C5C5" Offset="1"/>
-                    <GradientStop Color="#FFE0E0E0" Offset="0"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="200"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.Effect>
-                <DropShadowEffect BlurRadius="20" RenderingBias="Quality" ShadowDepth="1"/>
-            </Grid.Effect>
-            <Grid Background="#FF8522BD">
-                <Image Source="/assets/self_image.png" Margin="10"></Image>
-            </Grid>
-        </Grid>
-
-        <Grid x:Name="TitleBarGrid" Grid.ColumnSpan="2" Background="#FF8522BD" MouseDown="TitleBarGrid_MouseDown">
+        <Grid x:Name="TitleBarGrid" Grid.ColumnSpan="2" Background="#FFF0F0F0" MouseDown="TitleBarGrid_MouseDown">
+            <Label Foreground="Black" Margin="10 3 0 0">Dashboard</Label>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="2">
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" Foreground="Black" Margin="2" BorderBrush="{x:Null}">
                     <materialDesign:PackIcon Kind="Bell"></materialDesign:PackIcon>
                 </Button>
-                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="2">
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" Foreground="Black" Margin="2" BorderBrush="{x:Null}">
                     <materialDesign:PackIcon Kind="Account"></materialDesign:PackIcon>
                 </Button>
-                <Button x:Name="CloseButton" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="CloseButton_Click" Margin="2">
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" x:Name="CloseButton" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Click="CloseButton_Click" Margin="2">
                     <materialDesign:PackIcon Kind="Power"></materialDesign:PackIcon>
                 </Button>
             </StackPanel>
         </Grid>
+
+        <Grid Grid.Row="1" Background="#FF3D4658">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Label HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#DDFFFFFF">SYSTEM DASHBOARD</Label>
+            </Grid>
+            <StackPanel Grid.Row="1">
+                <Button Background="Transparent" Foreground="White" Margin="20" BorderBrush="{x:Null}">DASHBOARD</Button>
+                <Button Background="Transparent" Foreground="White" Margin="20" BorderBrush="{x:Null}">NAVIGATION</Button>
+                <Button Background="Transparent" Foreground="White" Margin="20" BorderBrush="{x:Null}">PAGE LAYOUTS</Button>
+            </StackPanel>
+        </Grid>
+
+        <!-- Dashboard Content -->
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Rectangle Height="120" Margin="20" Fill="White" RadiusY="10" RadiusX="10">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <Grid Margin="25" Height="120">
+                        <TextBlock Text="Rp30.000.000,00" HorizontalAlignment="Left" FontFamily="Champagne &amp; Limousines" Margin="15" VerticalAlignment="Top" Foreground="Gray"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 35">
+                            <TextBlock Text="All Earnings" FontFamily="Champagne &amp; Limousines" VerticalAlignment="Center" Foreground="Gray" FontSize="25"/>
+                        </StackPanel>
+                        <Rectangle Margin="-5,79,-5,0" Fill="#FFF39F74">
+                        </Rectangle>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Rectangle Height="120" Margin="20" Fill="White" RadiusY="10" RadiusX="10">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <Grid Margin="25" Height="120">
+                        <TextBlock Text="Rp30.000.000,00" HorizontalAlignment="Left" FontFamily="Champagne &amp; Limousines" Margin="15" VerticalAlignment="Top" Foreground="Gray"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 35">
+                            <TextBlock Text="All Earnings" FontFamily="Champagne &amp; Limousines" VerticalAlignment="Center" Foreground="Gray" FontSize="25"/>
+                        </StackPanel>
+                        <Rectangle Margin="-5,79,-5,0" Fill="#FFC3A596">
+                        </Rectangle>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Rectangle Height="120" Margin="20" Fill="White" RadiusY="10" RadiusX="10">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <Grid Margin="25" Height="120">
+                        <TextBlock Text="Rp30.000.000,00" HorizontalAlignment="Left" FontFamily="Champagne &amp; Limousines" Margin="15" VerticalAlignment="Top" Foreground="Gray"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 35">
+                            <TextBlock Text="All Earnings" FontFamily="Champagne &amp; Limousines" VerticalAlignment="Center" Foreground="Gray" FontSize="25"/>
+                        </StackPanel>
+                        <Rectangle Margin="-5,79,-5,0" Fill="#FF9C6A51">
+                        </Rectangle>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Rectangle Height="120" Margin="20" Fill="White" RadiusY="10" RadiusX="10">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <Grid Margin="25" Height="120">
+                        <TextBlock Text="Rp30.000.000,00" HorizontalAlignment="Left" FontFamily="Champagne &amp; Limousines" Margin="15" VerticalAlignment="Top" Foreground="Gray"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 35">
+                            <TextBlock Text="All Earnings" FontFamily="Champagne &amp; Limousines" VerticalAlignment="Center" Foreground="Gray" FontSize="25"/>
+                        </StackPanel>
+                        <Rectangle Margin="-5,79,-5,0" Fill="#FFE6A586">
+                        </Rectangle>
+                    </Grid>
+                </Grid>
+            </StackPanel>
+        </Grid>
+
+
     </Grid>
 </Window>
